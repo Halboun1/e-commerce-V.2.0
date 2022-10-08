@@ -52,8 +52,9 @@ function ProductScreen(){
         : error? <div>{error}</div>
         : <div>
             <Row>
-                <Col md={6}></Col>
-                <img className="img-large" src={product.image} alt={product.name}></img>
+                <Col md={4}>
+                    <img className="img-large" src={product.image} alt={product.name}></img>
+                </Col>
                 <Col md={3}>
                     <ListGroup variant="flush">
                         <ListGroup.Item>
