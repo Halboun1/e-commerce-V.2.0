@@ -42,7 +42,7 @@ const data = {
             category: 'Tablets',
             image: '/images/Tablet.jpg',
             price: 1300,
-            countInStock: 10,
+            countInStock: 0,
             brand: 'Kiwii',
             rating: 4.5,
             numReviews: 5,
