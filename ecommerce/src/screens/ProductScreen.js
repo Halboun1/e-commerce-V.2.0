@@ -9,6 +9,9 @@ import Card from "react-bootstrap/esm/Card";
 import Badge from "react-bootstrap/esm/Badge";
 import {Helmet} from 'react-helmet-async';
 import Button from "react-bootstrap/esm/Button";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
+import { getError } from "../utils";
 
 
 const reducer = (state, action) => {
@@ -41,16 +44,20 @@ function ProductScreen(){
             const result = await axios.get(`/api/products/slug/${slug}`);
             dispatch({type: 'FETCH_SUCCESS', payload: result.data });
           } catch (err) {
-            dispatch({type: 'FETCH_FAIL', payload: err.message });
+            dispatch({type: 'FETCH_FAIL', payload: getError(err) });
           }
         };
         fetchData();
       }, [slug]);
 
     return (
-        loading? <div>Loading...</div>
-        : error? <div>{error}</div>
-        : <div>
+        loading? (
+            <LoadingBox/>
+            ) : error? (
+            <MessageBox variant="danger">{error}</MessageBox> 
+            )
+        : (
+            <div>
             <Row>
                 <Col md={4}>
                     <img className="img-large" src={product.image} alt={product.name}></img>
@@ -107,7 +114,7 @@ function ProductScreen(){
                     </Card>
                 </Col>
             </Row>
-        </div>
+        </div> )
     );
        
 }
