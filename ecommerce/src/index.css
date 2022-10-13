@@ -66,3 +66,8 @@ main {
 .snall-container {
   max-width: 600px;
 }
+
+.signin-container {
+  max-width: 400px;
+  margin: auto;
+}
