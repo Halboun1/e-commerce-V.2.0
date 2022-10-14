@@ -34,6 +34,9 @@ function reducer(state, action) {
           localStorage.setItem('cartItems',JSON.stringify(cartItems));
           return {...state, cart: {...state.cart, cartItems}};
         }
+
+        case 'USER_SIGIN':
+          return {...state, userInfo: action.payload};
         
         default:
             return state;
@@ -41,7 +44,7 @@ function reducer(state, action) {
 }
 
 export function StoreProvider(props) {
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const value = {state, dispatch};
-    return <Store.Provider value={value}>{props.children}</Store.Provider>;
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const value = { state, dispatch };
+  return <Store.Provider value={value}>{props.children} </Store.Provider>;
 }
