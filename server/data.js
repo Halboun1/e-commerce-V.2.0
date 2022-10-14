@@ -1,7 +1,6 @@
 const data = {
     products: [
         {
-            _id: '1',
             name: 'Headphones PB',
             slug: 'power-beats',
             category: 'Headphones',
@@ -14,7 +13,6 @@ const data = {
             description: 'Pure Adaptive Noise Canceling for active noise blocking with real-time audio calibration based on fit',
         },
         {
-            _id: '2',
             name: 'Laptop Arma',
             slug: 'Arma-hurron',
             category: 'Laptop',
@@ -27,7 +25,6 @@ const data = {
             description: 'Gaming pc that will run anything for you, great quality with high end graphic cards, 2TB SSD',
         },
         {
-            _id: '3',
             name: 'Headphones TB',
             slug: 'True-beats',
             category: 'Headphones',
@@ -40,7 +37,6 @@ const data = {
             description: 'Pure Adaptive Noise Canceling for active noise blocking with real-time audio calibration based on fit',
         },
         {
-            _id: '4',
             name: 'Tablet Kiwii',
             slug: 'soadas',
             category: 'Tablets',
