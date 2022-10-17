@@ -33,7 +33,7 @@ main {
 
 
 .product {
-  border-radius: 2%;
+  border-radius: 1px #404040 solid;
   margin: 2rem;
 }
 
