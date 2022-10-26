@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { avigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Store } from '../Store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CheckoutSteps from '../components/CheckoutSteps';
@@ -10,7 +10,7 @@ import CheckoutSteps from '../components/CheckoutSteps';
 
 
 
-export default function () {
+export default function ShippingAddressScreen() {
     const navigate = useNavigate();
     const {state, dispatch: ctxDispatch} = useContext(Store);
 
