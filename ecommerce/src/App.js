@@ -86,10 +86,6 @@ function App() {
               <Route path="/shipping" element={<ShippingAddressScreen />}></Route>
               <Route path="payment" element={<PaymentMethodScreen/>}></Route>
               <Route path="/" element={<HomeScreen />} />
-              <Route path="/" element={<HomeScreen />} />
-              <Route path="/" element={<HomeScreen />} />
-              <Route path="/" element={<HomeScreen />} />
-              <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>
         </main>
