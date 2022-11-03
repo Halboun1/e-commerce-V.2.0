@@ -7,6 +7,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
+  "engines": {
+    "node": "16.13.2"
+  },
   "scripts": {
     "build": "cd server && npm install && cd ../ecommerce && npm install && npm run build",
     "start": "node server/server.js",
